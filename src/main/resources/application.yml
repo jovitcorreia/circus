@@ -1,0 +1,32 @@
+auth:
+  token:
+    expiration: 14400000
+    secret: WnZq4t7w!z%C*F-JaNdRgUkXp2s5u8x/A?D(G+KbPeShVmYq3t6w9y$B&E)H@McQ
+spring:
+  datasource:
+    url: jdbc:postgresql://circus-database:5432/circus
+    username: circus
+    password: circus
+  flyway:
+    enabled: on
+    table: flyway_history
+    baseline-on-migrate: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format-sql: true
+        jdbc:
+          lob:
+            non-contextual-creation: true
+      show-sql: true
+    open-in-view: true
+  main:
+    banner-mode: off
+  output:
+    ansi:
+      enabled: always
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
